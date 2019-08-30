@@ -1,0 +1,36 @@
+{% extends 'base.html' %}  <!--{to keep the main form-->
+
+{% block content %}
+<section id="one" class="">
+								<div class="image main" data-position="center">
+									<img src="media/img/placeholder.jpg" alt="" height="auto">
+								</div>
+								<div class="container">
+									<header class="major">
+										<h2>Read Only</h2>
+										<p><!--[-->Just an incredibly simple responsive site<!--]--><br>
+										<!--[-->template freebie by <a href="http://html5up.net">HTML5 UP</a><!--]-->.</p>
+									</header>
+									<p>Faucibus sed lobortis aliquam lorem blandit. Lorem eu nunc metus col. Commodo id in arcu ante lorem ipsum sed accumsan erat praesent faucibus commodo ac mi lacus. Adipiscing mi ac commodo. Vis aliquet tortor ultricies non ante erat nunc integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum.</p>
+								</div>
+							</section>
+<div class="site-section">
+
+      <div class="container overlap-section">
+        <div class="row">
+          {% for post in posts %}
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
+            <a href="post/{{post.slug}}" class="unit-1 text-center">
+              <img src="{{post.images.url}}" alt="Image" class="img-fluid">
+              <div class="unit-1-text">
+                <h3 class="unit-1-heading">{{post.title}}</h3>
+              </div>
+            </a>
+          </div>
+            {% endfor %}
+        </div>
+      </div>
+
+    </div>
+
+{% endblock %}

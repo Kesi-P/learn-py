@@ -1,0 +1,11 @@
+{% extends 'base.html' %}  <!--{to keep the main form-->
+
+{% block content %}
+
+<a href="/">Back to index</a>
+<br>
+<h1>{{post.title}}</h1>
+    <span>{{post.created}}</span>
+    <p>{{post.content}}</p>
+
+{% endblock %}
